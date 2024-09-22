@@ -64,7 +64,7 @@ function Sidebar({openSidebarToggle,OpenSidebar}) {
                 </a>
             </li>
             <li className='sidebar-list-item'>
-                <a href="">
+                <a href="/">
                     <BsFillGearFill className='icon'/> Setting
                 </a>
             </li>

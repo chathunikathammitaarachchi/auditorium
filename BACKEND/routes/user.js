@@ -5,6 +5,17 @@ import { User } from '../models/User.js';
 import jwt from 'jsonwebtoken';
 import nodemailer from 'nodemailer';
 
+router.get('/users-count', async (req, res) => {
+    try {
+      const count = await User.countDocuments(); // Adjust as per your schema
+      return res.json({ status: true, count });
+    } catch (err) {
+      return res.status(500).json({ status: false, message: "Error retrieving users count" });
+    }
+  });
+  
+  
+
 router.post('/signup', async (req, res) => {
     const { name, email, password } = req.body;
 

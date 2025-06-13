@@ -71,7 +71,7 @@ router.post('/forgot-password', async (req, res) => {
             from: 'auditoriumsystem@gmail.com',
             to: email,
             subject: 'Reset Password',
-            text: `http://localhost:5173/resetPassword/${encodedToken}`
+            text: `http://localhost:5173/resetpassword/${encodedToken}`
         };
 
         transporter.sendMail(mailOptions, function (error, info) {
